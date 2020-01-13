@@ -3,9 +3,10 @@ import { addAsync } from '@awaitjs/express';
 
 const router = addAsync(Router());
 
-router.useAsync('/', (req, res, next) => {
-    throw new Error("Hello World!!!");
-});
+import HomeController from '../controllers/HomeController';
+
+const homeController = new HomeController();
+
+router.get('/', homeController.index.bind(homeController));
 
 export default router;
-
