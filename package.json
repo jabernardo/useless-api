@@ -1,0 +1,36 @@
+{
+  "name": "useless-api",
+  "version": "1.0.0",
+  "description": "Mock API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rimraf dist/ && npx babel-core ./src --out-dir dist/ --copy-files",
+    "start": "npx nodemon --require @babel/register src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jabernardo/useless-api.git"
+  },
+  "author": "John Aldrich Bernardo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jabernardo/useless-api/issues"
+  },
+  "homepage": "https://github.com/jabernardo/useless-api#readme",
+  "dependencies": {
+    "@awaitjs/express": "^0.4.0",
+    "express": "^4.17.1",
+    "morgan": "^1.9.1",
+    "nodemon": "^2.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.8.0",
+    "@babel/plugin-transform-runtime": "^7.8.0",
+    "@babel/polyfill": "^7.8.0",
+    "@babel/preset-env": "^7.8.2",
+    "@babel/register": "^7.8.0",
+    "rimraf": "^3.0.0"
+  }
+}
